@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD</title>
+</head>
+<style>
+    .container {
+        position: relative;
+        text-align: center;
+        color: brown;
+        font-size: 60px;
+    }
+    
+    .bottom-left {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        animation-name: blef;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate; 
+    }
+    @keyframes blef {
+        0%   {color:brown; bottom:8px; left:16px; transform: rotate(720deg);}
+        33%  {color:antiquewhite; bottom:8px; left: 30%;}
+        66%  {color:lightcoral; bottom:30%; left:16px;}
+        100% {color:brown; bottom:8px; left:16px;}
+    }
+    
+    .top-left {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        animation-name: lef;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate; 
+    }
+    @keyframes lef {
+        0%   {color:brown; top:8px; left:16px; transform: rotate(-720deg);}
+        33%  {color:violet; top:30%; left: 16px;}
+        66%  {color:aqua; top:8px; left:30%;}
+        100% {color:brown; top:8px; left:16px;}
+    }
+    
+    .top-right {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        animation-name: righ;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+    @keyframes righ {
+        0%   {color:brown; top:8px; right:16px; transform: rotate(1080deg);}
+        33%  {color:seagreen; top:8px; right: 30%;}
+        66%  {color:khaki; top:30%; right:16px;}
+        100% {color:brown; top:8px; right:16px;}
+    }
+    
+    .bottom-right {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+        animation-name: brig;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes brig {
+        0%   {color:brown; bottom:8px; right:16px; transform: rotate(720deg);}
+        33%  {color:coral; bottom:8px; right: 30%;}
+        66%  {color:midnightblue; bottom:30%; right:16px;}
+        100% {color:brown; bottom:8px; right:16px;}
+    }
+    
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        animation-name: cen;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+    @keyframes cen{
+        0%   {color:brown; left:50%; top:50%; transform: rotate(720deg);}
+        25%  {color:yellow; left:70%; top:70%; transform: rotate(360deg); font-size: 80px;}
+        50%  {color:blue; left:30%; top:70%; transform: rotate(180deg);font-size: 30px;}
+        75%  {color:blue; left:50%; top:20%; transform: rotate(360deg);}
+        100% {color:brown; left:45%; top:45%; transform: rotate(-720deg); font-size: 60px;}
+    }
+    </style>
+<body>
+    <h2>Image Text</h2>
+    <p>How to place text over an image:</p>
+    <div class="container">
+        <img src="banner_circle.gif" alt="" width="100%" height="100%">
+        <div class="bottom-left">Bottom Left</div>
+        <div class="top-left">Top Left</div>
+        <div class="top-right">Top Right</div>
+        <div class="bottom-right">Bottom Right</div>
+        <div class="centered">Centered</div>
+    </div>
+</body>
+</html>

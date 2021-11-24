@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transitionTransform</title>
+</head>
+<style>
+    div {
+        width: 500px;
+        height: 100px;
+        font-size: 80px;
+        color:white;
+        background: red;
+        transition:2s ,transform 2s;
+        text-align: center;
+    }
+    div:hover {
+        width: 1000px;
+        height: 200px;
+        background-color: blueviolet;
+        font-size: 160px;
+        transform: rotate(360deg);
+        transition:width 2s, height 3s, font-size 4s, transform 2s;
+    }
+</style>
+<body>
+    <div>
+        <p>transition</p>
+    </div>
+</body>
+</html>
